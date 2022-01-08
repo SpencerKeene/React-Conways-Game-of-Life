@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+<a name="top"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Conways-Game-of-Life
+A simulation of John Conway's Game of Life using Vanilla JavaScript.
 
-## Available Scripts
+## Table of Contents
+- [What is John Conway's Game of Life?](#What-is-John-Conways-Game-of-Life?)
+  - [What are the rules?](#What-are-the-rules?)
+  - [Interesting patterns](#Interesting-patterns-)
 
-In the project directory, you can run:
+<a name="What-is-John-Conways-Game-of-Life?"/>
 
-### `npm start`
+-----
+## What is John Conway's Game of Life?
+The **Game of Life**, created by the mathematician **John Conway**, is a form of _cellular automaton_. In simpler terms, it is a _grid_ consisting of _cells_ that can either be _on_ or _off_. Each cell's state is determined by its _neighbours_. The grid moves on to the next _generation_ by recalculating the state of every cell. This is usually calculated to its entirety before changing the state of any cell
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the Game of Life, the state of a cell is known as _alive_ or _dead_, rather than on or off, and each cell has a total of eight neighbours, those neighbours are its surrounding cells. Normally, the Game of Life is played on an infinite grid, but in my simulation it is played on a finite grid. The option for the grid to loop around to its opposite side is also being explored.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<a name="What-are-the-rules?"/>
 
-### `npm test`
+### What are the rules?
+As previously stated, each cell has one of two state, alive or dead. Each cell also interacts with its eight neighbours, the cells surrounding it (see figure 1).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/CA-Moore.svg/200px-CA-Moore.svg.png" alt="Cell neighbours" width="100"/>
 
-### `npm run build`
+>Figure 1: Cell Neighbours (Cellular automaton, Wikipedia.org 2021)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The state of a cell in the next generation is determined by the state of the cell's neighbours in the current generation. Only live neighbours are counted, not dead ones. The rules for a cell's state go as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. A live cell with exactly two or three neighbours stays alive.
+2. A live cell with fewer than two neighbours or greater than three neighbours dies
+3. A dead cell with exactly three neighbours comes to life
+4. A dead cell with fewer or greater than three neighbours stays dead
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a name="Interesting-patterns-"/>
 
-### `npm run eject`
+### Interesting patterns
+Based on these rules, there are many interesting patterns in the Game of Life. These patterns are categorized into three major types:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Still life:** These patterns stay perfectly still, appearing exactly the same between generations. (see figure 2)
+2. **Oscillator:** These patterns oscillate, or move back and forth, between several different pictures. They appear to be in a loop through multiple generations. (see figure 3)
+3. **Spaceships:** These patterns are similar to oscillators except instead of staying in the same place, they move throughout the grid. (see figure 4)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Beehive](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Game_of_life_beehive.svg/98px-Game_of_life_beehive.svg.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+>Figure 2: Beehive (Conway's Game of Life, Wikipedia.org 2021)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Blinker](https://upload.wikimedia.org/wikipedia/commons/9/95/Game_of_life_blinker.gif)
 
-## Learn More
+>Figure 3: Blinker (Conway's Game of Life, Wikipedia.org 2021)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Glider](https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+>Figure 4: Glider (Conway's Game of Life, Wikipedia.org 2021)
 
-### Code Splitting
+These patterns once created on a board will last forever unless interfered with. However, there are some variations of these patterns that when coliding with another specific pattern, will consume the other pattern and return to its initial state. These patterns are called **Eaters**. (see figure 5)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Eater 5 eating a glider](https://www.conwaylife.com/w/images/7/79/Eater5_small.gif)
 
-### Analyzing the Bundle Size
+>Figure 5: Eater 5 eating a Glider (Eater, ConwayLife.com 2021)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Some patterns can also create other patterns. These patterns are typically called **Guns**. (see figure 6)
 
-### Making a Progressive Web App
+![Gosper's Glider Gun](https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+>Figure 6: Gosper's Glider Gun (Conway's Game of Life, Wikipedia.org 2021)
 
-### Advanced Configuration
+With an infinite grid, there are infinite possibilities. Many people have been able to come up with some outstanding creations. One of the best so far is [the Game of Life within the Game of Life](https://youtu.be/xP5-iIeKXE8) (Phillip Bradbury, Life in Life, YouTube.com 2021).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<div align="right">
+  <a href="#top">Back to top</a>
+</div>
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a name="About-the-project-"/>
