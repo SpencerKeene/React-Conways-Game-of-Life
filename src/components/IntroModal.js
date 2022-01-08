@@ -27,6 +27,17 @@ const IntroModal = () => {
             .
           </p>
           <p>
+            To learn how the game works checkout my{" "}
+            <a
+              href="https://github.com/SpencerKeene/React-Conways-Game-of-Life/blob/main/README.md"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              README
+            </a>
+            .
+          </p>
+          <p>
             To learn about the Game of Life, visit the Game of Life&nbsp;
             <a
               href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
