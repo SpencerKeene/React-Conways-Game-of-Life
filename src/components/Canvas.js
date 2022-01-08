@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState, useEffect } from "react";
-import * as GOL from "../helpers/gameOfLife.js";
+import * as GOL from "../helpers/GameOfLife.js";
 
 const Canvas = ({
   positionX,

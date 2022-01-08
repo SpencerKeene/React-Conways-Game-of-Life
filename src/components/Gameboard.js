@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Toolbar from "./Toolbar";
 import Canvas from "./Canvas";
-import * as GOL from "../helpers/gameOfLife.js";
+import * as GOL from "../helpers/GameOfLife.js";
 
 const Gameboard = () => {
   const [generation, setGeneration] = useState(0);
