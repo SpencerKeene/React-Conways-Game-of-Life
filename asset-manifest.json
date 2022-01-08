@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-Conways-Game-of-Life/static/css/main.f91e738a.chunk.css",
+    "main.js": "/React-Conways-Game-of-Life/static/js/main.fcd1dd62.chunk.js",
+    "main.js.map": "/React-Conways-Game-of-Life/static/js/main.fcd1dd62.chunk.js.map",
+    "runtime-main.js": "/React-Conways-Game-of-Life/static/js/runtime-main.5992a6c0.js",
+    "runtime-main.js.map": "/React-Conways-Game-of-Life/static/js/runtime-main.5992a6c0.js.map",
+    "static/js/2.009f2057.chunk.js": "/React-Conways-Game-of-Life/static/js/2.009f2057.chunk.js",
+    "static/js/2.009f2057.chunk.js.map": "/React-Conways-Game-of-Life/static/js/2.009f2057.chunk.js.map",
+    "static/js/3.82e73a59.chunk.js": "/React-Conways-Game-of-Life/static/js/3.82e73a59.chunk.js",
+    "static/js/3.82e73a59.chunk.js.map": "/React-Conways-Game-of-Life/static/js/3.82e73a59.chunk.js.map",
+    "index.html": "/React-Conways-Game-of-Life/index.html",
+    "static/css/main.f91e738a.chunk.css.map": "/React-Conways-Game-of-Life/static/css/main.f91e738a.chunk.css.map",
+    "static/js/2.009f2057.chunk.js.LICENSE.txt": "/React-Conways-Game-of-Life/static/js/2.009f2057.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5992a6c0.js",
+    "static/js/2.009f2057.chunk.js",
+    "static/css/main.f91e738a.chunk.css",
+    "static/js/main.fcd1dd62.chunk.js"
+  ]
+}
